@@ -1,0 +1,52 @@
+.pricing {
+    display: flex;
+    margin-bottom: 50px;
+    &__card {
+        position: relative;
+        margin-right: 30px;
+        border: 1px solid black;
+        padding: 15px;
+        h3{
+            font-family: $space;
+            font-size: 40;
+        }
+        span{
+            font-family: $space;
+            font-weight: lighter;
+        }
+        strong{
+            font-size: 25px;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            font-family: $space;
+            font-weight: lighter;
+            margin-bottom: 10px;
+        }
+    }
+    &__promos{
+        position: absolute;
+    }
+    &__banner{
+        position: relative;
+        width: 100px;
+        height: 300px;
+
+    }
+    &__banner_top{
+        position: absolute;
+        top:0;
+        width: 100%;
+        background-color: red;
+        height: 25px ;
+        box-shadow: 5px 11px 18px -8px rgba(0,0,0,0.48);
+        z-index: 3;
+    }
+    &__banner_body{
+        height: 200px;
+        background-color: red;
+        clip-path: polygon(0 0, 100% 0%, 100% 73%, 48% 100%, 0 72%);
+    }
+}

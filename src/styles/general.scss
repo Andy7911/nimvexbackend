@@ -1,0 +1,77 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container{
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0px 100px;
+    @media (max-width:$desktop-l) {
+        max-width: 1000px;
+        padding: 0px 50px ;
+        
+    }
+    @media (max-width:$desktop) {
+        max-width: 1000px;
+        padding: 0px 40px ;
+        
+    }
+    @media (max-width:$tablet-h) {
+        max-width: 1000px;
+        padding: 0px 20px ;
+        
+    }
+    @media (max-width:$tablet-v) {
+        max-width: 720px;
+        padding: 0px 20px ;
+    }
+
+    @media(max-width:$mobile){
+        max-width: 600px;
+    }
+
+    @media(max-width:$mobile-m){
+        max-width: 440px;
+    }
+
+}
+.desktop-show{
+display: block;
+    @media(max-width:$tablet-v){
+        display: none !important;
+    }
+}
+
+.mobile-show{
+    display: none !important;
+    @media(max-width: $tablet-v){
+        display: block !important ;
+    }
+}
+h2{
+    font-family: "Space Grotesk", serif;
+    font-size: 40px;
+  
+   
+    margin: 0;
+    width: fit-content;
+}
+h3{
+    font-family: "Space Grotesk", serif;
+    font-size: 30px; 
+
+ 
+}
+h4{
+    font-family:"Space Grotesk", serif; 
+    font-size: 20px;
+    margin: 0;
+}
+p{
+    font-size: 18px;
+   
+}

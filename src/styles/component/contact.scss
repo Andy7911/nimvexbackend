@@ -1,0 +1,117 @@
+.contact {
+    margin-bottom: 100px;
+    form {
+        display: flex;
+        background-color: #F3F3F3;
+        padding: 50px;
+        border-radius: 15px;
+        justify-content: space-between;
+
+        @media(max-width:$tablet-v) {
+            padding: 25px;
+        }
+
+        label {
+            display: block;
+            font-size: 16px;
+            font-family: "Space Grotesk", serif;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding-left: 20px;
+            border-radius: 14px;
+            height: 59px;
+            border: 1px solid #000;
+            width: 100%;
+
+            &::-webkit-input-placeholder {
+                font-size: 20px;
+
+            }
+
+
+        }
+    }
+
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 45%;
+
+        @media(max-width:$tablet-v) {
+            width: 100%;
+        }
+
+    }
+
+    &__right {
+        width: 45%;
+        position: relative;
+
+        img {
+            position: absolute;
+            right: -50px;
+            top: 0;
+            height: 100%;
+            width: auto;
+        }
+
+        @media(max-width: $tablet-v) {
+            display: none;
+        }
+    }
+
+    .input_content {
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    textarea {
+        width: 100%;
+        border-radius: 14px;
+        height: 100px;
+        padding-left: 20px;
+    }
+
+    &__title {
+
+        margin-bottom: 50px;
+        display: flex;
+
+        @media(max-width:$tablet-v) {
+            flex-direction: column;
+        }
+
+        h2 {
+            background-color: #0c3076;
+            width: fit-content;
+            font-family: "Space Grotesk", serif;
+            padding: 5px;
+            color: #fff;
+            border-radius: 7px;
+
+            @media(max-width:$tablet-v) {
+                margin: 0 0 30px;
+            }
+        }
+
+        p {
+            font-family: "Space Grotesk", serif;
+            font-weight: lighter;
+            font-size: 16px;
+            width: 40%;
+            margin-left: 30px;
+
+            @media(max-width: $tablet-v) {
+                width: 100%;
+                margin: 0;
+
+            }
+
+        }
+
+    }
+}

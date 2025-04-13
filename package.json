@@ -1,0 +1,36 @@
+{
+  "name": "nimvex2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@strapi/blocks-react-renderer": "^1.0.2",
+    "@svgr/webpack": "^8.1.0",
+    "emailjs-com": "^3.2.0",
+    "gsap": "^3.12.5",
+    "html-react-parser": "^5.2.2",
+    "next": "15.0.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-markdown": "^9.0.3",
+    "react-spinners": "^0.14.1",
+    "swiper": "^11.2.4"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.8",
+    "css-loader": "^7.1.2",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.3",
+    "husky": "^9.1.7",
+    "postcss": "^8",
+    "sass": "^1.84.0",
+    "sass-loader": "^16.0.4",
+    "style-loader": "^4.0.0",
+    "tailwindcss": "^3.4.1"
+  }
+}

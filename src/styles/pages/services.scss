@@ -1,0 +1,98 @@
+.services{
+
+h1{
+    background-color: $navyBlue;
+    color:white;
+    width: fit-content;
+    padding: 5px 15px;
+    
+}
+
+.service_section{
+
+    display:  flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    &:nth-child(odd){
+        flex-direction: row-reverse;
+        @media(max-width:$tablet-v){
+            flex-direction: column;
+        }
+    }
+    @media(max-width:$tablet-v){
+        flex-direction: column;
+    }
+    &__left{
+        width: 46%;
+        @media(max-width:$tablet-v){
+            width: 100%;
+        }
+        p{
+            font-family: 'Space Grotesk", serif';
+        }
+        
+    }
+    &__right{
+        width: 46%;
+        @media(max-width:$tablet-v){
+            width: 100%;
+        }
+        img{
+            display: block;
+            margin: 0 0 0 auto ;
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__service{
+       
+            display: flex;
+            flex-direction: column;
+    }
+}
+
+.service_accordion{
+    margin-bottom: 10px;
+    background-color: $navyBlue;
+    padding: 10px 20px;
+    border-radius: 17px;
+   
+
+
+  
+   
+&__top{
+    text-align: center;
+    color: white;
+    padding: 10px 10px 0px;
+    position: relative;
+    &::after{
+        content: '';
+        position:absolute;
+        top: 0px;
+        right: 10px;
+        width: 40px;
+        height: 40px;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0ibTE2LjcwNyAxMy4yOTMtNC00YTEgMSAwIDAgMC0xLjQxNCAwbC00IDRhMSAxIDAgMCAwIDAgMS40MTQgMSAxIDAgMCAwIC43MDcuMjkyaDhhMSAxIDAgMCAwIC43MDctMS43MDd6IiBmaWxsPSIjZmY4ZTMxIiBkYXRhLW5hbWU9IlVwIi8+PC9zdmc+");        background-repeat: no-repeat;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: rotate(180deg);
+        
+
+    }
+    h3{
+        font-size: 20px;
+       font-family: 'Space Grotesk", serif';
+       font-weight: 500;
+       margin: 0;
+    }
+    
+}
+&__content{
+    background-color: #cacaca;
+    padding: 10px;
+    border-radius: 0px 0px 17px 17px;
+}
+    
+}
+}

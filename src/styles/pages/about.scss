@@ -1,0 +1,92 @@
+.about {
+
+    h1 {
+        width: fit-content;
+        background-color: $navyBlue;
+        color: #fff;
+        padding: 5px;
+
+    }
+
+    .intro {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        // background-color: #ffeeca;
+        background-color: #fff;
+
+    }
+
+    .culture {
+        position: relative;
+        background-color: $navyBlue;
+        min-height: 500px;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        margin-bottom: 50px;
+
+        h2 {
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        &__section {
+            display: flex;
+            justify-content: space-between;
+
+            @media(max-width:$tablet-v) {
+                flex-direction: column;
+            }
+
+            &:nth-child(odd) {
+                flex-direction: row-reverse;
+                @media(max-width: $tablet-v){
+                    flex-direction: column;
+                }
+            }
+        }
+
+        &__section_left {
+            width: 45%;
+
+            @media(max-width:$tablet-v) {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        &__section_right {
+            width: 45%;
+            color: #fff;
+            @media(max-width:$tablet-v) {
+                width: 100%;
+            }
+            h3 {
+                font-family: "Space Grotesk", serif;
+                font-weight: bold;
+            }
+
+            p {
+                font-family: "Space Grotesk", serif;
+                font-weight: lighter;
+                font-size: 18px;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -300px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230c3076' fill-opacity='1' d='M0,288L1440,128L1440,320L0,320Z'/%3E%3C/svg%3E");
+
+            width: 100%;
+            height: 330px;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+    }
+}

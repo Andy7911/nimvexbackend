@@ -1,0 +1,313 @@
+.home {
+
+
+    .hero {
+        &__left {}
+
+        &__right {}
+
+
+    }
+
+    .service {
+        margin-bottom: 100px;
+
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+
+
+
+        }
+
+        &__title {
+            margin-bottom: 50px;
+            display: flex;
+
+            @media(max-width:$tablet-h) {
+                flex-direction: column;
+            }
+
+            h2 {
+                background-color: #0c3076;
+                width: fit-content;
+                font-family: "Space Grotesk", serif;
+                color: #fff;
+                padding: 0px 5px;
+                border-radius: 7px;
+
+                @media(max-width:$tablet-v) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            p {
+                font-family: "Space Grotesk", serif;
+                font-weight: lighter;
+                font-size: 16px;
+                width: 60%;
+
+                margin: 0 30px;
+
+                @media(max-width:$tablet-v) {
+                    width: 100%;
+                    margin: 0;
+                }
+
+            }
+        }
+
+        &__card {
+            display: flex;
+            justify-content: center;
+            width: calc(45% - 20px);
+            border-radius: 25px;
+            border: 1px solid black;
+            padding: 20px;
+            background-color: #F3F3F3;
+            max-width: 560px;
+            min-width: 249px;
+            margin-bottom: 40px;
+            box-shadow: 0px 10px 13px -7px #000000, 1px 5px 17px 7px rgba(0, 0, 0, 0);
+
+            @media(max-width:$tablet-h) {
+                margin-bottom: 30px;
+                width: 100%;
+            }
+
+            h3 {
+                font-family: "Space Grotesk", serif;
+                font-weight: 600;
+                background-color: #0c3076;
+                width: fit-content;
+                font-size: 30px;
+                margin-right: 20px;
+                color: #fff;
+                padding: 5px 5px;
+                margin: 0;
+                border-radius: 7px;
+
+                @media(max-width:$tablet-h) {
+                    font-size: 26px;
+                }
+
+            }
+        }
+
+        &__card_left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            a {
+                margin-top: 20px;
+                text-decoration: none;
+                font-family: "Space Grotesk", serif;
+                display: flex;
+            }
+        }
+
+        &__card_right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            img {
+                display: block;
+                margin: auto auto;
+
+                @media(max-width:$tablet-h) {
+                    width: 165px;
+                    height: 116px;
+
+                }
+
+
+            }
+        }
+
+    }
+
+    .marketing {
+        margin-bottom: 50px;
+
+        &__card {
+            display: flex;
+            padding: 30px;
+            background-color: #F3F3F3;
+            border-radius: 30px;
+        }
+
+        &__card_left {
+            width: 50%;
+
+            h3 {
+                font-family: "Space Grotesk", serif;
+                font-size: 26px;
+                margin-bottom: 50px;
+            }
+
+            p {
+                font-size: 20px;
+                margin-bottom: 50px;
+            }
+
+            @media(max-width:$tablet-v) {
+                width: 100%;
+            }
+        }
+
+        &__card_right {
+            position: relative;
+            width: 50%;
+
+            img {
+                position: absolute;
+                display: block;
+                top: -15%;
+                right: -100px;
+                width: 464px;
+                height: auto;
+            }
+        }
+    }
+
+    .working {
+        &__top {
+            padding: 50px 20px;
+            display: flex;
+
+            @media(max-width:$tablet-v) {
+                flex-direction: column;
+            }
+
+            h2 {
+                margin: 0;
+                font-size: 40px;
+                font-family: "Space Grotesk", serif;
+                background-color: #0c3076;
+                border-radius: 7px;
+                padding: 5px;
+                color: #fff;
+
+                @media(max-width:$tablet-v) {
+                    font-size: 36px;
+                }
+            }
+
+            p {
+                margin: auto auto;
+                font-size: 16px;
+
+                width: 60%;
+                font-family: "Space Grotesk", serif;
+                font-weight: lighter;
+
+                @media(max-width:$tablet-v) {
+                    width: 100%;
+                }
+            }
+
+        }
+
+        &__card {
+            border-radius: 30px;
+            border: 1px solid black;
+            padding: 20px;
+
+        }
+
+        &__card_header {
+            border-bottom: 1px solid black;
+        }
+
+        .bar {
+            width: 10px;
+            height: 3px;
+            background-color: #000000;
+        }
+
+    }
+
+    // .case_study {
+    //     &__top {
+    //         padding: 50px 20px;
+    //         display: flex;
+
+    //         @media(max-width:$tablet-v) {
+    //             flex-direction: column;
+    //             justify-content: center;
+    //         }
+
+    //         h3 {
+    //             background-color: #0c3076;
+    //             width: fit-content;
+    //             font-size: 40px;
+    //             font-family: "Space Grotesk", serif;
+    //             color: #fff;
+    //             padding: 0px 5px;
+    //             border-radius: 7px;
+    //             margin: 0;
+
+    //             @media(max-width: $tablet-v) {
+    //                 font-size: 36px;
+    //                 margin: 0 0 30px;
+
+    //             }
+
+    //         }
+
+    //         p {
+    //             margin: 0 auto;
+    //             font-family: "Space Grotesk", serif;
+    //             font-weight: lighter;
+    //             font-size: 16px;
+    //             margin: 0 auto;
+    //             width: 60%;
+
+    //             @media(max-width: $tablet-v) {
+    //                 width: 100%;
+    //             }
+    //         }
+    //     }
+
+    //     &__content {
+    //         border-radius: 45px;
+    //         padding: 50px 25px;
+    //         background-color: #191A23;
+    //         color: #fff;
+    //         display: flex;
+    //     }
+
+    //     &__text {
+    //         display: flex;
+    //         width: 33.3%;
+    //         padding: 30px;
+    //         flex-direction: column;
+    //         justify-content: space-between;
+
+    //         &:not(:last-child) {
+    //             border-right: 2px solid #fff;
+    //             margin-right: 20px;
+    //         }
+
+    //         p {
+    //             font-family: "Space Grotesk", serif;
+    //             font-weight: lighter;
+    //             font-size: 16px;
+    //             line-height: 1.44;
+    //         }
+
+    //         a {
+    //             font-size: 20px;
+    //             color: #7d88da;
+    //             font-family: "Space Grotesk", serif;
+    //         }
+    //     }
+    // }
+
+}

@@ -1,0 +1,62 @@
+.hero {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 75px;
+    @media(max-width: $tablet-v){
+       flex-direction: column-reverse;
+    }
+    &__left {
+        width: 48%;
+        @media(max-width: $tablet-v){
+            width: 100%;
+        }
+    }
+    
+    h1{
+        font-size: 60px;
+        font-family: "Space Grotesk", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+        font-style: normal;
+        margin-bottom: 50px;
+        @media(max-width:$desktop-l){
+            font-size: 52px;
+            margin-bottom: 40px;
+        }
+        @media(max-width:$desktop){
+            font-size: 40px;
+        }
+        @media(max-width:$tablet-h){
+            margin-bottom: 20px;
+
+            font-size: 34px;
+        }
+        @media(max-width:$tablet-v){
+            font-size: 43px;
+        }
+        @media(max-width:$mobile){
+            font-size: 30px;
+        }
+    }
+    p{
+        font-size: 20px;
+        margin-bottom: 40px;
+        @media(max-width:$tablet-h){
+            font-size: 18px;
+        }
+        @media(max-width: $mobile){
+            font-size: 16px;
+        }
+    }
+
+    &__right {
+        width: 48%;
+        img{
+            width: 100%;
+            height: auto;
+        }
+        @media(max-width: $tablet-v){
+            width: 100%;
+        }
+    }
+}

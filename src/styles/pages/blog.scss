@@ -1,0 +1,127 @@
+.blog {
+    margin-bottom: 100px;
+    &__top {
+        padding: 50px 20px;
+        display: flex;
+
+        @media(max-width:$tablet-v) {
+            flex-direction: column;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 40px;
+            font-family: "Space Grotesk", serif;
+            background-color: #0c3076;
+            border-radius: 7px;
+            padding: 5px;
+            color: #fff;
+        }
+
+        p {
+            margin: auto auto;
+            font-size: 16px;
+
+            width: 60%;
+            font-family: "Space Grotesk", serif;
+            font-weight: lighter;
+
+            @media(max-width:$tablet-v) {
+                width: 100%;
+            }
+        }
+
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: space-between;
+        border-radius: 10px;
+        background-color: #fff;
+        width: calc(33% - 13px);
+        box-shadow: 5px 3px 9px -5px rgba(0, 0, 0, 0.74);
+        margin-right: 20px;
+        color: black;
+        @media(max-width:$mobile){
+            width: 100%;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+    }
+
+    &__card_top {
+
+        padding: 20px;
+
+        h4 {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        span {
+            display: block;
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: #0c3076;
+            color: #fff;
+            border-radius: 5px;
+            width: fit-content;
+            padding: 7px 12px;
+        }
+
+        strong {
+            font-size: 20px;
+            font-weight: 400;
+            font-family: "Space Grotesk", serif;
+
+
+        }
+
+
+    }
+
+    &__card_body {
+        padding: 0px 20px 1px;
+
+        p {
+            font-family: "Space Grotesk", serif;
+            font-weight: lighter;
+            margin: 0;
+        }
+    }
+
+    &__card_bottom {
+        padding: 20px 20px 20px;
+        a {
+            text-decoration: none;
+            color: #fff;
+            border-radius: 5px;
+            background-color: $blue-light;
+            padding: 5px 10px;
+            font-size: 20px;
+            font-family: "Space Grotesk", serif;
+        }
+    }
+
+
+
+}
+.blog-single{
+    .wysiwyg{
+        h1{
+            font-size: 50px;
+        }
+    }
+}
