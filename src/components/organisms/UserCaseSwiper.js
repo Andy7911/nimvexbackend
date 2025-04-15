@@ -29,10 +29,14 @@ export default function UserCaseSwiper({ UserCases }) {
           breakpoints={{
                     
             480: {
-                slidesPerView: 2,
+                slidesPerView: 1,
                 spaceBetween: 40,
             },
-            720: {
+            540:{
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            1040: {
                 slidesPerView: 3,
                 spaceBetween: 50,
             }

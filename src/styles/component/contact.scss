@@ -20,10 +20,11 @@
 
         input {
             padding-left: 20px;
-            border-radius: 14px;
+            border-radius: 5px;
             height: 59px;
             border: 1px solid #000;
             width: 100%;
+            border: none;
 
             &::-webkit-input-placeholder {
                 font-size: 20px;
@@ -71,9 +72,11 @@
 
     textarea {
         width: 100%;
-        border-radius: 14px;
+        border-radius: 5px;
         height: 100px;
         padding-left: 20px;
+        resize: none;
+        border:none;
     }
 
     &__title {

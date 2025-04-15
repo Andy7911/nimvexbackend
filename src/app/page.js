@@ -10,8 +10,10 @@ import ReactMarkdown from 'react-markdown';
 import parse from 'html-react-parser';
 import Editeur from '../components/templates/Editeur'
 import UseCaseSwiper from '../components/organisms/UserCaseSwiper';
+
 export default async function Home() {
 
+ 
 
 
   async function getData() {

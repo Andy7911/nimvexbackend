@@ -11,7 +11,7 @@ export default function ServicesAccordion({ title, content }) {
     const HandleActive = () => {
         setActive(!isActive)
     }
-    return (<div className='service_accordion'>
+    return (<div className={`service_accordion ${isActive ? 'active':''}`}>
 
         <div className='service_accordion__top' onClick={()=>HandleActive()}>
            <h3> {title}</h3>

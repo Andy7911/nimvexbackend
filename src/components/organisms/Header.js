@@ -20,11 +20,13 @@ export default function Nav() {
     hamMenu:true,
   })
 
-
+const [closeNav,setClose] = useState()
 
 
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [showNavbar, setShowNavbar] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [width,setWith] = useState();
+
   const handleScroll = () => {
     if (window.scrollY > lastScrollY) {
       // Scrolling down
@@ -37,14 +39,51 @@ export default function Nav() {
   };
 
   useEffect(() => {
+
+    
     window.addEventListener('scroll', handleScroll);
+    function handleResize(){
+
+   
+      setWith(window.innerWidth);
+      
+    
+    }
+    function hideNav(){
+
+      if(width <= 720){
+        setOpenSubmenus((prev) => ({
+          ...prev,
+          hamMenu: false,
+        }));
+      
+       }
+       if(width > 720){
+        setOpenSubmenus((prev) => ({
+          ...prev,
+          hamMenu: true,
+        }));
+      
+       }
+    if(width > 780){
+      setOpenSubmenus((prev) => ({
+        ...prev,
+        hamMenu: true,
+      }));
+    }
+    }
+    handleResize()
+    hideNav();
+
+    window.addEventListener("resize", handleResize)
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollY]);
+  }, [width]);
 
+  console.log(width)
   const toggleSubmenu = (menu) => {
-    debugger;
+ 
     setOpenSubmenus((prevState) => ({
       ...prevState,
       [menu]: !prevState[menu], // Basculer l'état du sous-menu sélectionné
