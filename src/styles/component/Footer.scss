@@ -5,7 +5,9 @@ padding: 20px 50px;
     &__top {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #cacaca;
+        
         @media(max-width:$tablet-v){
             flex-direction: column;
         }
@@ -36,7 +38,8 @@ padding: 20px 50px;
     &__left{
         width: 50%;
         p{
-            color:white;
+            font-family: "Space Grotesk", serif;            
+            color:black;
         }
     }
     %__right{

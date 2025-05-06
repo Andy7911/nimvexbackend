@@ -8,13 +8,16 @@
     background-color: #fff;
     color: white;
     padding: 1rem;
-    transition: transform 0.3s ease-in-out;
+    transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s ease;
     z-index: 9;
     box-sizing: border-box;
     // box-shadow:0px 0px 10px 0px rgba(0,0,0,0.49) ;
 
     @media(max-width:$tablet-v) {
         flex-direction: column;
+        padding-left: 70px;
+        align-items: start;
+
     }
 
     &__logo {
@@ -23,7 +26,7 @@
             height: auto;
 
             @media(max-width:$tablet-v) {
-                width: 150px;
+                width: 125px;
 
             }
         }
@@ -35,7 +38,7 @@
         padding: 5px 5px;
         position: absolute;
         top: 35px;
-        right: 0;
+        left: 20px;
         cursor: pointer;
 @media(max-width:$tablet-v){
     display: flex;
@@ -66,6 +69,21 @@
         }
     }
 
+    &__bar_link{
+        @media(max-width: $tablet-v) {
+            text-align: center;
+            padding: 10px 10px;
+            width: 100%;
+            &:hover {
+                background-color: #B9FF66;
+            }
+        }
+svg{
+    position: relative;
+  top: 3px;
+  left: 3px;
+}
+    }
     &__bar {
 
         padding-left: 20px;
@@ -89,14 +107,8 @@
             &:not(:last-child){
                 margin-right: 40px;
             }
-            @media(max-width: $tablet-v) {
-                text-align: center;
-                padding: 10px 10px;
-                width: 100%;
-                &:hover {
-                    background-color: #B9FF66;
-                }
-            }
+        
+         
         }
 
         a {
@@ -110,6 +122,7 @@
     }
 
     &__sub-menu {
+        padding-bottom: 30px;
         position: absolute;
         right: -71px;
         display: flex;
@@ -131,6 +144,10 @@
             width: 100%;
             height: auto;
             margin-bottom: 20px;
+            @media(max-width:$tablet-v){
+                display: none;
+            }
+        
         }
 
         li {
@@ -169,12 +186,36 @@
 }
 
 .nav.hidden {
-    // background-color:greenyellow;
+opacity: 0;
+    transform: translateY(-150px);
+    visibility: visible;
+    @media(max-width:$tablet-v){
+        visibility: initial;
+        position: static;
+        opacity: 1;
+        transform: translateY(0);
+
+    }
+    
 }
 
 .nav.visible {
+    opacity: 1;
     transform: translateY(0);
+    visibility: visible;
+    @media(max-width:$tablet-v){
+        visibility: initial;
+        position: static;
+
+    }
    
+   
+}
+.nav__bar_link.rotation{
+    svg{
+        transform: rotate(180deg);
+        transition: ease 0.4s;
+    }
 }
 
 // .nav {

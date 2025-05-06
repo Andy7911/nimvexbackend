@@ -25,7 +25,7 @@ const Footer = async () => {
     <div className='footer'>
 
       <div className='footer__top'>
-      {/* <Image src="http://localhost:1337/uploads/Screenshot_2025_02_14_at_12_18_41_PM_5a71e8648d.png" width={219} height={100} alt='image' /> */}
+          <Image src="http://localhost:1337/uploads/Screenshot_2025_02_14_at_12_18_41_PM_5a71e8648d.png" width={200} height={94} alt='image' />
 
         <ul>
           {FooterLinks.map((item,index) => (
@@ -48,7 +48,7 @@ const Footer = async () => {
            </div>
       </div>
       <div className="footer_bottom">
-      &copy 2025 nimvex  tous droit reservé
+      &copy; 2025 nimvex  tous droit reservé
       </div>
     </div>
   )

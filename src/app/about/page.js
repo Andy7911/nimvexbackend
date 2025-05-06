@@ -1,11 +1,19 @@
 import react from 'react';
 
 import Image from 'next/image';
+import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import Editeur from '../../components/templates/Editeur';
 
-export default function Page() {
 
+export default async function Page() {
+const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/about?[populate][imageText]=*`,{
 
+  headers:{'Authorization':"Bearer ",}
+})
 
+const response = await res.json()
+const {whyUs , imageText} = response;
+console.log(response.data.whyUs)
     return (<div className='about'>
 
 <div className='container'>
@@ -13,27 +21,8 @@ export default function Page() {
 
         <div className='intro' >
             <div className='container'>
-                <h2>Pourquoi Travailler Avec Nous ? 🚀</h2>
+              <Editeur Article={response.data.whyUs}  />
 
-                <div>
-                    <p>
-                        Nous savons que choisir un prestataire en développement web et mobile est une décision importante. Voici pourquoi nous sommes le bon choix pour vous :
-                    </p>
-                    ✅ Expertise Technique Solide
-                    Avec plus de 3 ans d’expérience en développement web et plusieurs projets en React Native, nous créons des solutions modernes, performantes et adaptées à vos besoins.
-                    <p>
-                        ✅ Approche Sur-Mesure
-                        Chaque projet est unique ! Nous prenons le temps de comprendre vos besoins pour développer un site ou une application qui vous ressemble et qui génère des résultats.
-                    </p>
-                    ✅ Transparence & Communication
-                    Nous vous accompagnons à chaque étape du projet avec une explication claire et un suivi régulier. Pas de jargon technique compliqué, juste des solutions adaptées à votre activité.
-                    <p>
-                        ✅ Optimisation & Performance
-                        Un site rapide et bien référencé, c’est plus de clients potentiels. Nous optimisons chaque projet pour garantir une vitesse optimale et une visibilité sur Google.
-                    </p>
-                    <p>
-                        ✅ Accompagnement & Support</p>
-                </div>
             </div>
         </div>
 
@@ -44,7 +33,7 @@ export default function Page() {
                 <div className='culture__section'>
 
                     <div className='culture__section_left'>
-                        <Image src="http://localhost:1337/uploads/What_to_do_if_youre_concerned_about_a_colleagues_wellbeing_438431_1024x576_0bf83324a7.jpg" width={500} height={300} />
+                        <Image src="http://localhost:1337/uploads/What_to_do_if_youre_concerned_about_a_colleagues_wellbeing_438431_1024x576_0bf83324a7.jpg" width={500} height={300} alt='bol' />
 
                     </div>
                     <div className='culture__section_right'>
@@ -61,7 +50,7 @@ export default function Page() {
                 <div className='culture__section'>
 
                     <div className='culture__section_left'>
-                        <Image src="http://localhost:1337/uploads/Tech_Dev_1_c73a7acdfe.png" width={500} height={300} />
+                        <Image src="http://localhost:1337/uploads/Tech_Dev_1_c73a7acdfe.png" width={500} height={300} alt='text' />
 
                     </div>
                     <div className='culture__section_right'>
